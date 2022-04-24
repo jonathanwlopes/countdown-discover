@@ -43,7 +43,7 @@ export const methods = {
   countdown: (props, limitedInterval) => {
     const containerRegisterClosed = methods.getElement(props.containerRegisterClosed)
     containerRegisterClosed.classList.add("hide")
-    
+
     const formattedEventDate = new Date(`${props.eventDate} ${props.eventHour}`).getTime()
     const formattedCurrentDate = new Date().getTime()
 
@@ -141,6 +141,8 @@ export const methods = {
 
     reset.setAttribute("disabled", "disabled")
     submit.removeAttribute("disabled")
+
+    document.location.reload();
   },
 
   handleConfig: () => {
