@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./build/styles.css" />
+    <title>Countdown Discover</title>
+  </head>
+  <body>
+    <div class="countdown">
+      <main class="countdown__container">
+        <div class="countdown__menu">
+          <button class="countdown__menu--config" id="config">Configurações</button>
+        </div>
+        <header class="countdown__header"></header>
+        <section class="countdown__content">
+          <article class="countdown__content__register hide" id="container-counter">
+            <h1 class="countdown__content__register--title" id="container-released">Pronto para lançar em...</h1>
+            <div class="countdown__content__register--counter">
+              <div class="countdown__content__register--counter--wrapper-count">
+                <span class="countdown__content__register--counter--header">Dias</span>
+                <span class="countdown__content__register--counter--number" id="days"></span>
+              </div>
+              <div class="countdown__content__register--counter--wrapper-count">
+                <span class="countdown__content__register--counter--header">Horas</span>
+                <span class="countdown__content__register--counter--number" id="hours"></span>
+              </div>
+              <div class="countdown__content__register--counter--wrapper-count">
+                <span class="countdown__content__register--counter--header">Minutos</span>
+                <span class="countdown__content__register--counter--number" id="minutes"></span>
+              </div>
+              <div class="countdown__content__register--counter--wrapper-count">
+                <span class="countdown__content__register--counter--header">Segundos</span>
+                <span class="countdown__content__register--counter--number" id="seconds"></span>
+              </div>
+            </div>
+            <p class="countdown__content__register--paragraph">Inscreva-se para saber mais sobre o lançamento</p>
+            <button type="submit" class="countdown__content__register--submit">
+              <span class="countdown__content__register--submit--text">Inscreva-se</span>
+            </button>
+          </article>
+          <article class="countdown__content__register countdown__content__register--closed hide" id="container-register-closed">
+            <h1 class="countdown__content__register--title countdown__content__register--closed--title">Inscrições encerradas.</h1>
+          </article>
+          <figure class="countdown__content__figure">
+            <img src="./src/assets/images/rocket.svg" alt="Foguete decolando" />
+          </figure>
+        </section>
+        <footer class="countdown__footer"></footer>
+      </main>
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <h2 class="modal--title">Preencha os dados</h2>
+        <form class="modal__form" id="form">
+          <div class="modal__form--column">
+            <label class="modal__form--label" for="date">Data do evento:</label>
+            <input class="modal__form--input" type="date" id="date" name="date" required />
+          </div>
+
+          <div class="modal__form--column">
+            <label class="modal__form--label" for="form-hours">Horário do evento:</label>
+            <input
+              class="modal__form--input"
+              type="text"
+              id="form-hours"
+              name="form-hours"
+              placeholder="00:00:00"
+              autocomplete="off"
+              maxlength="8"
+              required
+            />
+          </div>
+
+          <div class="modal__form--buttons">
+            <button class="modal__form--submit" id="submit">Confirmar</button>
+            <button class="modal__form--reset" id="reset" disabled>Limpar dados</button>
+          </div>
+          <span class="modal__form--error hide" id="error">Revise os valores informados.</span>
+          <span class="modal__form--close" id="form-close">X</span>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="./src/scripts/index.js" type="module"></script>
+</html>

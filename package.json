@@ -1,0 +1,9 @@
+{
+  "name": "countdown-discover",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "sass --watch ./src/styles/sass/global.scss:./build/styles.css"
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
